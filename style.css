@@ -1,0 +1,75 @@
+
+body{
+    background-color: #3e4f61;
+}
+.button{
+    width: 130px;
+    height: 6vh;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+}
+.button:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    animation: border-top-right 2s infinite alternate;
+
+
+}
+
+.button:after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    animation: border-bottom 2s infinite alternate;
+
+
+}@keyframes border-top-right{
+    0% {height:0px; width: 0px;}
+    25% {height: 0vh; width: 130px;}
+    50% {height: 5.7vh; width: 130px;}
+    100% {height: 5.7vh; width: 130px;}
+}
+@keyframes border-bottom {
+    0% {height:0px; width: 0px; opacity: 0;}
+    50% {height:0px; width: 0px; opacity: 0;}
+    50.1% {height:0px; width: 0px; opacity: 1;}
+    75% {height: 0vh; width: 130px; opacity: 1;}
+    100% {height: 5.7vh; width: 130px;opacity: 1;}
+}
+.button:hover{
+    box-shadow: 0px 0px 15px 5px rgba(255, 230, 0, 0.733);
+    background-color: rgba(255, 230, 0, 0.733);
+}
+.button button{
+    font-size: 3vh;
+    background-color: transparent;
+    border: none;
+    height: 6vh;
+    width: 130px;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+.button button:hover{
+    color: #000;
+}
